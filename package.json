@@ -1,19 +1,26 @@
 {
   "name": "orbyt-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "orbyty wallet bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mindsgn/orbyt-bot.git"
   },
-  "author": "",
+  "author": "Sibongiseni Tembe",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mindsgn/orbyt-bot/issues"
   },
-  "homepage": "https://github.com/mindsgn/orbyt-bot#readme"
+  "homepage": "https://github.com/mindsgn/orbyt-bot#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
 }

@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "test",
+    "password": "test",
+    "database": "orbyt",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": "5432",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "test",
+    "password": "test",
+    "database": "orbyt",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "bfuuuusyvahcie",
+    "password": "862a9d78ccb87bf26fb0659cfa71fb17b289855de7544375da1a2206032f1d33",
+    "database": "dfn1hj5q65jh4s",
+    "host": "ec2-34-200-72-77.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "port": "5432",
+    "operatorsAliases": false,
+    "use_env_variable": "postgres://bfuuuusyvahcie:862a9d78ccb87bf26fb0659cfa71fb17b289855de7544375da1a2206032f1d33@ec2-34-200-72-77.compute-1.amazonaws.com:5432/dfn1hj5q65jh4s"
+  }
+}

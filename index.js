@@ -13,9 +13,12 @@ app.use(express.urlencoded());
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+app.use(express.static(path.join(__dirname, 'build')));
+
+
 app.get('/', (req, res) => {
-  res.send('hmm');
-})
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.get('/new', (req, res) => {
   db.auth.findOrCreate({where: {phone:req.body.phone}})

@@ -6,7 +6,7 @@ const exphbs = require('express-handlebars');
 var port = process.env.PORT || 3000;
 const app = express();
 
-const db = require('./models/index.js');
+//const db = require('./models/index.js');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded());

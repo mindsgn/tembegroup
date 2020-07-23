@@ -29,6 +29,11 @@ app.get('/connect', (req, res) =>{
 
       io.emit('post', message);
     });
+
+    socket.on('disconnect', () => {
+      console.log('user disconnected');
+    });
+
   });
 })
 

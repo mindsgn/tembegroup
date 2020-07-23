@@ -22,7 +22,8 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  console.log('a user connected');
+  //io.emit('user connected', 'user connected');
+  console.log('user connected');
 
   socket.on('post', (message) => {
     console.log('message: ', message);

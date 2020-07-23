@@ -16,11 +16,7 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-app.get('/connect', (req, res) =>{
+//app.get('/connect', (req, res) =>{
   io.on('connection', (socket) => {
     console.log('a user connected');
 
@@ -34,7 +30,11 @@ app.get('/connect', (req, res) =>{
       console.log('user disconnected');
     });
   });
-})
+//})
 
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 server.listen(port, () => console.log('server is running', port))

@@ -6,7 +6,7 @@ const cors = require('cors');
 var port = process.env.PORT || 3000;
 const app = express();
 
-var server = require('http').createServer(app);
+var server = require('https').createServer(app);
 var io = require('socket.io').listen(server);
 
 app.use(bodyParser.urlencoded({extended: true}));

@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
-const cors = require('cors');
+
 var port = process.env.PORT || 3000;
 const app = express();
 
@@ -13,23 +13,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded());
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
-io.origins('*')
 
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
-io.on('connection', (socket) => {
-  //io.emit('user connected', 'user connected');
-  console.log('user connected');
+  io.on('connection', (socket) => {
+    console.log('a user connected');
 
-  socket.on('post', (message) => {
-    console.log('message: ', message);
+    socket.on('post', (message) => {
+      console.log('message: ', message);
 
-    io.emit('post', message);
+      io.emit('post', message);
+    });
   });
 });
 
-server.listen(port, () => console.log('server is running', port))
+
+server.listen(port, () => console.log('server is running'))

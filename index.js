@@ -31,4 +31,4 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(port, () => console.log('server is running'))
+server.listen(port, () => console.log('server is running', ${PORT}))

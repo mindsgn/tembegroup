@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded());
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
+io.origins('*')
 
 app.use(express.static(path.join(__dirname, 'build')));
 

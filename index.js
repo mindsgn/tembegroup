@@ -33,9 +33,8 @@ app.get('/connect', (req, res) =>{
     socket.on('disconnect', () => {
       console.log('user disconnected');
     });
-
   });
 })
 
 
-server.listen(port, () => console.log('server is running'))
+server.listen(port, () => console.log('server is running', port))

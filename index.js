@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
+const cors = require('cors');
 var port = process.env.PORT || 3000;
 const app = express();
 
@@ -10,6 +11,7 @@ var io = require('socket.io').listen(server);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded());
+app.use(cors());
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
